@@ -1,4 +1,4 @@
-const
+
 
 const API = {
   async getLastWorkout() {
@@ -44,3 +44,5 @@ const API = {
     return json;
   },
 };
+
+module.exports = API;
