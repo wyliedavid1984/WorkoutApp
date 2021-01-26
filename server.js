@@ -10,7 +10,7 @@ const router = express.Router();
 // Connection to db
 const dbURI = "mongodb+srv://wyliedavid1984:DatabasePass!1@cluster0.tsfe6.mongodb.net/Workouts?retryWrites=true&w=majority";
 
-mongoose.connect("mongodb://localhost:27017/workoutdb" || dbURI, {
+mongoose.connect("mongodb://localhost:27017/workout" || dbURI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
