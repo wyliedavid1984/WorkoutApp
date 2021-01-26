@@ -7,10 +7,11 @@ module.exports = function (app) {
 
     });
 
-    app.get("/api/workouts", ({ body }, res) => {
-        console.log(body, "/api/works get")
+    app.get("/api/workouts", (req, res) => {
+        console.log("/api/works get")
         Workout.find({}, (err, data) => {
             if (err) throw err;
+            console.log(data);
             res.json(data);
         });
     });
@@ -26,7 +27,7 @@ module.exports = function (app) {
     app.put("/api/workouts/:id", ({body, params}, res) => {
         console.log(body, "api/workouts/:id")
         Workout.findByIdAndUpdate(params.id, {
-            $push: { exercise: body }
+            $push: { exercises: body }
         }, (err, data) => {
             if (err) throw err;
             res.json(data)

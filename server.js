@@ -8,24 +8,21 @@ const app = express();
 const router = express.Router();
 
 // Connection to db
-const dbURI = "mongodb+srv://wyliedavid1984:DatabasePass!1@cluster0.tsfe6.mongodb.net/Workouts?retryWrites=true&w=majority";
+// const dbURI = "mongodb+srv://wyliedavid1984:DatabasePass!1@cluster0.tsfe6.mongodb.net/Workouts?retryWrites=true&w=majority";
 
-mongoose.connect("mongodb://localhost:27017/workout" || dbURI, {
+mongoose.connect(process.env.MONGODB_URI||"mongodb://localhost:27017/workout" , {
     useNewUrlParser: true,
-    useUnifiedTopology: true
+    useFindAndModify: false
 });
-
-mongoose.connection
-.once("open", () => console.log("Connected to database"),
-app.listen(PORT, () => console.log(`Listening on port: ${PORT}`)))
-.on("err", (err) => {
-    console.log(err)});
 
 // middleware
 app.use(express.json());
 app.use(express.static("public"));
 app.use(morgan("dev"));
 
-
+//routes
 require("./routes/htmlRoutes.js")(app);
 require("./routes/workoutRoutes.js")(app);
+
+//listening for connection
+app.listen(PORT, () => console.log(`Listening on port: ${PORT}`));
