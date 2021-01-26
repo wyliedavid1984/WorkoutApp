@@ -27,7 +27,5 @@ app.use(express.static("public"));
 app.use(morgan("dev"));
 
 
-require("./routes/htmlRoutes.js")(router);
-require("./routes/workoutRoutes.js")(router);
-
-app.use(router);
+require("./routes/htmlRoutes.js")(app);
+require("./routes/workoutRoutes.js")(app);
