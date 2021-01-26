@@ -10,13 +10,16 @@ const router = express.Router();
 // Connection to db
 const dbURI = "mongodb+srv://wyliedavid1984:DatabasePass!1@cluster0.tsfe6.mongodb.net/Workouts?retryWrites=true&w=majority";
 
-mongoose.connect("mongodb://localhost/workout", { useNewUrlParser: true, useUnifiedTopology: true })
-.then(results => {
-    
-    console.log("Connected to database"), 
-    app.listen(PORT, () => console.log(`Listening on port: ${PORT}`));
-})
-.catch(err => {console.log(err)});
+mongoose.connect("mongodb://localhost:27017/workoutdb" || dbURI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+});
+
+mongoose.connection
+.once("open", () => console.log("Connected to database"),
+app.listen(PORT, () => console.log(`Listening on port: ${PORT}`)))
+.on("err", (err) => {
+    console.log(err)});
 
 // middleware
 app.use(express.json());
