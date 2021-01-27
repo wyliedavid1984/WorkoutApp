@@ -36,11 +36,11 @@ This project is a fullstack application that tracks the users workouts and provi
 
 ## Javascript
 
-I use the MVC model to put together this project. using the following Javascript technologies
+Javascript was use to make most of the program between nodeJS and jQuery. The front end functionality was provided to us.
 
 ### Mongodb
 
-This was the application that we use to store our data, it is a noSql data base.
+This was the application that we use to store our data, it is a noSql data base. It uses BSON objects when storing data or Binary Javascript Object Notation. When working locally, the robo app help us to see the data base and what was been stored in the collections as well as the break down of the object being stored.
 
 ### JQuery
 
@@ -60,11 +60,7 @@ I used this to query data from our mongo data base. I also used it to create a s
 
 #### **Express**
 
-Express made coding this application much easier. I made use of the express function through a variable named route.  It helped to reduce the amount of code needed to make requests and responses.  
-
-I built routes and stored them in the routes files. 
-
-I used the express router function to make it easier to set up the requests. 
+Express made coding this application much easier. I made use of the express function through a variable named route.  It helped to reduce the amount of code needed to make requests and responses.  I built routes and stored them in the routes files. I used the express router function to make it easier to set up the requests. 
 
 ## HTML
 
