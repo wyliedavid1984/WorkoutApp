@@ -38,6 +38,10 @@ This project is a fullstack application that tracks the users workouts and provi
 
 I use the MVC model to put together this project. using the following Javascript technologies
 
+### Mongodb
+
+This was the application that we use to store our data, it is a noSql data base.
+
 ### JQuery
 
 I used jquery to help grab the data that the user input. It also gets other elements on the page, so that they can be manipulated. Each function that created has a corresponding route on the backend to help with the manipulation of the data being selected by the jQuery.
@@ -50,21 +54,17 @@ I used node to initialize package.json. After the initialization, I added mongoo
 
 I used npm to install the following dependencies mongoose, morgan, and express. 
 
-#### Mongoose
+#### **Mongoose**
 
 I used this to query data from our mongo data base. I also used it to create a schema as well as methods for the schema to help with total duration of the workout (combining all the exercises in the workout).
 
-#### Express
+#### **Express**
 
 Express made coding this application much easier. I made use of the express function through a variable named route.  It helped to reduce the amount of code needed to make requests and responses.  
 
 I built routes and stored them in the routes files. 
 
 I used the express router function to make it easier to set up the requests. 
-
-### Mongodb
-
-This was the application that we use to store our data, it is a noSql data base.
 
 ## HTML
 
@@ -91,18 +91,18 @@ This app is deployed. If you do want to add it locally. After forking and clonin
 <details>
 <summary>Screen Shots and Gif with Video link</summary>
 
-![Index Page](./public/assets/img/fileStructure.png)
+![Index Page](./public/img/index.png)
 
-![Stats Page](./public/assets/img/deployedApp.png)
+![Stats Page](./public/img/stats.png)
 
-![Exercise Page cardio](./public/assets/img/devoured.png)
+![Exercise Page cardio](./public/img/cardio.png)
 
-![Exercise Page resistance](./public/assets/img/devoured.png)
+![Exercise Page resistance](./public/img/resistance.png)
 
 
 Click on the gif to be linked to the video
 
-[![Gif of video](./public/assets/img/burger.gif)](https://drive.google.com/file/d/1ksQ5MTSu6CmkSAFhV17CSLzbEYdXySuO/view)
+[![Gif of video](./public/img/.gif)](https://drive.google.com/file/d/1gxIVTaGGQ1s8iOfuiRzn6souWQxnQH1c/view)
 
 
 </details>
