@@ -4,7 +4,7 @@ const Workout = require("../models/workout");
 module.exports = function (app) {
     // route for getting workouts to set up charts
     app.get("/api/workouts/range", (req, res) => {
-        Workout.find({}, (err, data) => {
+        Workout.find({ exercise: {$size:7}}, (err, data) => {
             if (err) throw err;
             res.json(data);
         });
