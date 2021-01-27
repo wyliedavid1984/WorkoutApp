@@ -24,8 +24,10 @@ app.use(express.static("public"));
 app.use(morgan("dev"));
 
 //routes
-require("./routes/htmlRoutes.js")(app);
-require("./routes/workoutRoutes.js")(app);
+require("./routes/htmlRoutes.js")(router);
+require("./routes/workoutRoutes.js")(router);
+
+app.use(router);
 
 //listening for connection
 app.listen(PORT, () => console.log(`Listening on port: ${PORT}`));
