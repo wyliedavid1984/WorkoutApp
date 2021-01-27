@@ -102,7 +102,7 @@ This app is deployed. If you do want to add it locally. After forking and clonin
 
 Click on the gif to be linked to the video
 
-[![Gif of video](./public/img/.gif)](https://drive.google.com/file/d/1gxIVTaGGQ1s8iOfuiRzn6souWQxnQH1c/view)
+[![Gif of video](./public/img/fitnessTracker.gif)](https://drive.google.com/file/d/1gxIVTaGGQ1s8iOfuiRzn6souWQxnQH1c/view)
 
 
 </details>
